@@ -1,5 +1,5 @@
 import pyttsx3 #pip install pyttsx3
-import speech_recognition as sr #pip install speechRecognition
+import speechRecognition as sr #pip install speechRecognition
 import datetime
 import wikipedia #pip install wikipedia
 import webbrowser
@@ -94,17 +94,17 @@ if __name__ == "__main__":
             speak(f"Sir, the time is {strTime}")
 
         elif 'open code' in query:
-            codePath = "C:\\Users\\Haris\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            codePath = "C:\\Users\\Joy\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
 
         elif 'email to Joy' in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "joyyourEmail@gmail.com"    
+                to = "yourEmail@gmail.com"    
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
                 print(e)
-                speak("Sorry my friend Joy bro. I am not able to send this email")    
+                speak("Sorry my friend Joy. I am not able to send this email")    
 
